@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<project name="WEB" default="deploy" basedir=".">
+	<property environment="env"></property>
+	<target name="deploy">
+		<scp todir="root@172.16.7.74:/usr/local/openapi/tomcat6_8011_apidoc/webapps/apidoc/examples/md/" port="22" password="sxdt@2016"  trust="true" verbose="true" >
+			<fileset dir="${basedir}/src/main/webapp/examples/md" includes="**/fuli_api_doc.md"/>
+			<fileset dir="${basedir}/src/main/webapp/examples/md" includes="**/standardEdition_api_doc.md"/>
+			<fileset dir="${basedir}/src/main/webapp/examples/md" includes="**/qalaxy_api_doc.md"/>
+		</scp>
+	</target>
+</project>

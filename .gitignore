@@ -1,0 +1,7 @@
+.metadata/
+RemoteSystemsTempFiles/
+*.bak
+*.class
+target/
+.svn/
+efot
